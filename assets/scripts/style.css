@@ -1,0 +1,424 @@
+
+		/* PARALLAX SCROLLING EXPERIMENT
+   Master Styles
+   Author: Jonathan Nicol (f6design.com)
+*****************************************************************/
+
+
+/* Global reset
+   http://meyerweb.com/eric/tools/css/reset/ 
+*****************************************************************/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Extended base styles (site specific)
+*****************************************************************/
+
+html { 
+	overflow-y: scroll; /* always force a scrollbar in non-IE */
+	}
+body {
+	background: #f5f5f5;
+	line-height: 1.5;
+	color: #181819;
+	font-size: 14px;
+	font-family: "matrix-ii", helvetica, arial ,sans-serif;
+}
+h1 {
+	font-family:"lunatix", "matrix-ii", sans-serif;
+	font-weight: light;
+	font-size: 6em;
+	line-height: 0.8em;
+	text-transform: uppercase;
+}
+
+h2 {
+	text-transform: lowercase;
+	letter-spacing: 1px;
+	font-family: "matrix-ii", sans-serif;
+	font-weight: bold;
+	font-variant: small-caps;
+	font-size: 1.5em;
+}
+
+h3 {
+	font-family:"lunatix", "matrix-ii", sans-serif;
+	font-weight: light;
+	font-size: 1em;
+	line-height: 0.8em;
+	text-transform: uppercase;
+}
+a, a:link,
+a:active,
+a:visited {
+	-webkit-transition: text-shadow 0.25s ease-out;
+	-moz-transition: text-shadow 0.25s ease-out;
+	-o-transition: text-shadow 0.25s ease-out;
+	transition: text-shadow 0.25s ease-out;
+	color:#181819;
+	outline: none;
+	text-decoration:none;
+	}
+	a:hover { 
+		text-shadow: 1px 1px 1px #fff800;
+		}
+
+
+#about a, #about a:link,
+#about a:active,
+#about a:visited {
+	text-transform: lowercase;
+	font-variant: small-caps;
+	font-size: 1.15em;
+	letter-spacing: 1px;
+}
+img { 
+	display:block;
+	}
+p {
+	margin:1em 0;
+	}
+
+/* Common shared styles
+*****************************************************************/
+
+hr {
+	margin: 0;
+	border: none;
+	border-top: 1px solid #3b3b3b;
+	border-bottom: 1px solid #3b3b3b;
+	height: 3px;
+}
+
+/* Page structure
+*****************************************************************/
+#branding {
+	width: 100%;
+	background: #fff;
+	}
+	#branding h1 {
+		width: 940px;
+		padding: 10px 15px;
+		margin: 0 auto;
+		text-transform: uppercase;
+		font-size: 18px;
+		font-weight: bold;
+		}
+
+
+/* Parallax
+*****************************************************************/
+
+/* content */
+#description {
+	line-height: 1.7;
+	z-index: 4;
+	position: fixed;
+	padding-top: 350px;
+	left:65vw;
+	width:17vw;
+}
+#currentwork {
+	z-index: 4;
+	position: fixed;
+	top: 1290px;
+	width:25vw;
+	left:10vw;
+	line-height: 1.7;
+}
+#prevwork {
+	z-index: 4;
+	position: fixed;
+	top: 2000px;
+	width: 30vw;
+	left:60vw;
+	line-height: 1.7;
+}
+
+#about {
+	z-index: 4;
+	position: fixed;
+	top: 3350px;
+	width: 25vw;
+	left:10vw;
+	line-height: 1.7;
+}
+
+#friends {
+	z-index: 4;
+	position: fixed;
+	top: 4700px;
+	width: 25vw;
+	left:50vw;
+	line-height: 1.7;
+}
+
+#footer {
+	z-index: 4;
+	position: absolute;
+	top: 9500px;
+	width: 50vw;
+	text-align: center;
+	left:25vw;
+	line-height: 1.7;
+	padding-bottom: 10vh;
+}
+
+/* foreground (ballons/landscape) */
+#parallax-bg3 {
+	z-index: 3;
+	position: fixed;
+	top: -750px;
+	width: 120vw;
+	left: -40vw;
+	}
+	/* balloon */
+	#bg3-1 {
+		width: 100%;
+		}
+/* midground (clouds) */
+#parallax-bg2 {
+	z-index: 0;
+	position: fixed;
+	width: 15vw;
+	top:40px;
+	left: 40vw;
+	}
+	#bg2-1 {
+		width:100%;
+		}
+/* background (clouds) */
+#parallax-bg1 {
+	z-index: 1;
+	position: fixed;
+	left: 30vw;
+	top: 350px;
+	width: 30vw;
+	}
+	#bg1-1 {
+		width:100%;
+		}
+
+#parallax-bg4 {
+	z-index: 3;
+	position: fixed;
+	top: -300px;
+	left: 0px;
+	width:70vw;
+}
+
+#parallax-bg5 {
+	z-index: 1;
+	position: fixed;
+	top: -290px;
+	left: 0px;
+	width:70vw;
+}
+
+#parallax-bg6 {
+	z-index: 1;
+	position: fixed;
+	top: 700px;
+	left: 50vw;
+	width:20vw;
+}
+
+#parallax-bg7 {
+	z-index: 0;
+	position: fixed;
+	top: 800px;
+	left: 40vw;
+	width:20vw;
+}
+
+#parallax-bg8 {
+	z-index: 0;
+	position: fixed;
+	top: 1000px;
+	left: 45vw;
+	width:30vw;
+}
+
+#parallax-bg9 {
+	z-index: 0;
+	position: fixed;
+	top: 2500px;
+	left: 45vw;
+	width:30vw;
+}
+
+#parallax-bg10 {
+	z-index: 0;
+	position: fixed;
+	top: 3700px;
+	left: 5vw;
+	width:20vw;
+}
+
+#parallax-bg11 {
+	z-index: 0;
+	position: fixed;
+	top: 4100px;
+	left: 30vw;
+	width:10vw;
+}
+
+#parallax-bg12 {
+	z-index: 0;
+	position: fixed;
+	top: 3500px;
+	left: 40vw;
+	width:20vw;
+}
+
+#parallax-bg13 {
+	z-index: 0;
+	position: fixed;
+	top: 5100px;
+	left: 65vw;
+	width:10vw;
+}
+
+#parallax-bg14 {
+	z-index: 0;
+	position: fixed;
+	top: 4800px;
+	left: 80vw;
+	width:15vw;
+}
+
+
+/* gallery */
+
+.portfoliopieces {
+	margin-top:3vh;
+}
+
+#stacks:before, #superimpose:before, #hab:before, #mbta:before, #fuckvr:before, #death:before {
+	content: '';
+	background-size: contain;
+	background-repeat: no-repeat;
+	display: block !important;
+	position: absolute;
+	filter: blur(15px);
+    -webkit-filter: blur(15px);
+    transition: .7s;
+    -webkit-transition: filter .7s, box-shadow. 7s;
+    -moz-transition: filter .7s, box-shadow. 7s;
+}
+
+#stacks:before {
+	background-image: url('../../projects/stacks/images/cover.jpg');
+	width:30vw;
+	height:30vh;
+	left:-50vw;
+}
+
+#superimpose:before {
+	background-image: url('../../projects/superimpose/images/cover.jpg');
+	width:50vw;
+	height:40vh;
+	left:-70vw;
+}
+
+#hab:before {
+	background-image: url('../../projects/hab/images/cover.jpg');
+	width:30vw;
+	height:90vh;
+	left:-30vw;
+}
+
+#mbta:before {
+	background-image: url('../../projects/mbta/images/cover.jpg');
+	width:70vw;
+	height:50vh;
+	left:-70vw;
+}
+
+#fuckvr:before {
+	background-image: url('../../projects/fuckvr/images/cover.jpg');
+	width:50vw;
+	height:40vh;
+	left:-60vw;
+	margin-top:10vh;
+}
+
+#death:before {
+	background-image: url('../../projects/death/images/cover.jpg');
+	width:40vw;
+	height:60vh;
+	left:-30vw;
+	margin-top: 10vh;
+}
+
+#stacks:hover:before, #superimpose:hover:before, #hab:hover:before, #mbta:hover:before, #fuckvr:hover:before, #death:hover:before {
+	filter: blur(0px);
+    -webkit-filter: blur(0px);
+}
+
+#grid1 {
+	width:30vw;
+	position: absolute;
+	left:60vw;
+	top:10vh;
+	z-index: 0;
+}
+
+#grid2 {
+	width:50vw;
+	position: absolute;
+	left:40vw;
+	top:200vh;
+	z-index: 0;
+}
+
+#grid3 {
+	width:40vw;
+	position: absolute;
+	left:5vw;
+	top:1000vh;
+	z-index: 0;
+}
+
