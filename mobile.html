@@ -19,26 +19,86 @@
 	</head>
 
 	<body>
-		<div id="container" class="container">
-			<ul id="scene" class="scene">
-				<li id="grid" class="layer" data-depth="0.01"><img src="assets/layoutimages/grid2.svg"></li>
-				<li id="arrow" class="layer" data-depth="-0.5"><img src="assets/layoutimages/arrowmobile.svg"></li>
-				<li id="z" class="layer" data-depth="0.35"><img src="assets/layoutimages/z2.svg"></li>
-				<li id="a" class="layer" data-depth="-0.10"><img src="assets/layoutimages/a3.svg"></li>
-				<li id="c" class="layer" data-depth="0.20"><img src="assets/layoutimages/c2.svg"></li>
-				<li id="h" class="layer" data-depth="-0.3"><img src="assets/layoutimages/h2.svg"></li>
-			</ul>
-		</div>
-		<div id="description">
-			<h1>Zach Deocadiz</h1>
-			<h2>Using interaction design to create future possibilities</h2>
+		<div id="screens">
+			<div class="dragend-page">
+				<div id="container" class="container">
+					<ul id="scene" class="scene">
+						<li id="grid" class="layer" data-depth="0.01"><img src="assets/layoutimages/grid2.svg"></li>
+						<li id="arrow" class="layer" data-depth="-0.5"><img src="assets/layoutimages/arrowmobile.svg"></li>
+						<li id="z" class="layer" data-depth="0.35"><img src="assets/layoutimages/z2.svg"></li>
+						<li id="a" class="layer" data-depth="-0.10"><img src="assets/layoutimages/a3.svg"></li>
+						<li id="c" class="layer" data-depth="0.20"><img src="assets/layoutimages/c2.svg"></li>
+						<li id="h" class="layer" data-depth="-0.3"><img src="assets/layoutimages/h2.svg"></li>
+					</ul>
+				</div>
+				<div id="description">
+					<h1>Zach Deocadiz</h1>
+					<h2>Using interaction design to create future possibilities</h2>
+				</div>
+			</div>
+
+			<div class="dragend-page">
+				<div class="paddingaround">
+					<h1>Work</h1>
+
+					<h2>Stacks</h2>
+					UI/UX, Systems, Visual<br><br>
+
+					<h2>hack@brown</h2>
+					UI/UX, Branding, Visual<br><br>
+
+					<h2>Weebly</h2>
+					UI/UX, Illustration<br><br>
+
+					<h2>MBTA App</h2>
+					UI/UX<br><br>
+
+					<h2>FuckVR</h2>
+					UI/UX, Systems<br><br>
+
+					<h2>Death of the News</h2>
+					Data Visualization<br><br>
+
+					<h2>UI Concepts</h2>
+					UI/UX, Systems<br><br>
+				</div>
+			</div>
+
+			<div class="dragend-page">
+				<div class="paddingaround">
+					<h1>Me</h1>
+					<a href="http://risd.gd">Graphic Design</a> student at the <a href="http://risd.edu">Rhode Island School of Design</a>. Vaguely a <a href="http://cs.brown.edu">Computer Science</a> student at <a href="http://brown.edu">Brown University.</a><br><br>
+
+					Interned at <a href="http://weebly.com">Weebly</a> and <a href="http://addventures.com">(add)ventures</a>. Design Team Lead at <a href="http://hackatbrown.org">hack@brown</a>. Design Lead for <a href="http://steamwith.us">STEAM Press</a>. TA for User Interface at Brown University.<br><br>
+
+					Find me on <a href="http://behance.net/deocadiz">Behance</a>, <br>
+					<a href="http://dribbble.com/zkdeocadiz">Dribbble</a>, <a href="http://twitter.com/zkdeocadiz">Twitter</a>, or <a href="http://facebook.com/firiathmortal">Facebook</a><br>
+					<a href="zachdeocadizresume.pdf">Look! My Resume!</a><br><br>
+
+					(that was a haiku)<br><br>
+
+					Email me at <a href="mailto:zach@deocadiz.com">zach@deocadiz.com</a><br>
+					My online sandbox is <a href="http://zachazach.com">here</a><br>
+					(this is not a haiku)
+				</div>
+			</div>
 		</div>
 
 	<script src="assets/scripts/parallax2.js"></script> 
+	<script src="assets/scripts/dragend.min.js"></script> 
 
 	<script>
 		var scene = document.getElementById('scene');
 		var parallax = new Parallax(scene);
+
+		document.addEventListener("DOMContentLoaded", function() {
+	      var container = document.getElementById("screens");
+	      dragend = new Dragend(container, {
+	        afterInitialize: function() {
+	          container.style.visibility = "visible";
+	        }
+	      });
+	    }, false)
 	</script>
 
 	</body>

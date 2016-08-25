@@ -66,6 +66,7 @@ h1 {
 	font-size: 6em;
 	line-height: 0.8em;
 	text-transform: uppercase;
+	padding-top:10vw;
 }
 
 h2 {
@@ -94,17 +95,28 @@ a:visited {
 	color:#F5F5F5;
 	outline: none;
 	text-decoration:none;
+	border-bottom:1px #ffffff solid;
 	}
 	a:hover { 
 		text-shadow: 1px 1px 1px #fff800;
 		}
 
+#screens {
+	width:100vw;
+}
 
+.dragend-page {
+	width:100vw;
+	overflow-x:none;
+}
 
-/* Parallax
+.paddingaround {
+	width:80vw;
+	margin-left:10vw;
+}
+
+/* splash 
 *****************************************************************/
-
-/* screen1 */
 
 #arrow {
 	width:90vw;
@@ -143,21 +155,28 @@ a:visited {
 
 #description {
 	width:80vw;
-	margin-top:-5vh;
+	margin-top:0vh;
 	margin-left:10vw;
 	text-align: right;
 }
 
 	#description h1 {
-		font-size: 5em;
+		font-size: 3.5em;
 		line-height: 1.2em;
 	}
 
 	#description h2 {
-		width:65%;
-		margin-left: 35%;
+		font-size: 1.25em;
+		width:75%;
+		margin-left: 25%;
 	}
 
 
+/* work
+*****************************************************************/
 
 
+
+
+/* me
+*****************************************************************/
