@@ -1,0 +1,163 @@
+/* Global reset
+   http://meyerweb.com/eric/tools/css/reset/ 
+*****************************************************************/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Extended base styles (site specific)
+*****************************************************************/
+
+html { 
+	overflow-y: scroll; /* always force a scrollbar in non-IE */
+	}
+
+body {
+	background: #181819;
+	line-height: 1.5;
+	color: #F5F5F5 !important;
+	font-size: 14px;
+	font-family: "matrix-ii", helvetica, arial ,sans-serif;
+}
+h1 {
+	font-family:"lunatix", "matrix-ii", sans-serif;
+	font-weight: light;
+	font-size: 6em;
+	line-height: 0.8em;
+	text-transform: uppercase;
+}
+
+h2 {
+	text-transform: lowercase;
+	letter-spacing: 1px;
+	font-family: "matrix-ii", sans-serif;
+	font-weight: bold;
+	font-variant: small-caps;
+	font-size: 1.5em;
+}
+
+h3 {
+	font-family:"lunatix", "matrix-ii", sans-serif;
+	font-weight: light;
+	font-size: 1em;
+	line-height: 0.8em;
+	text-transform: uppercase;
+}
+a, a:link,
+a:active,
+a:visited {
+	-webkit-transition: text-shadow 0.25s ease-out;
+	-moz-transition: text-shadow 0.25s ease-out;
+	-o-transition: text-shadow 0.25s ease-out;
+	transition: text-shadow 0.25s ease-out;
+	color:#F5F5F5;
+	outline: none;
+	text-decoration:none;
+	}
+	a:hover { 
+		text-shadow: 1px 1px 1px #fff800;
+		}
+
+
+
+/* Parallax
+*****************************************************************/
+
+/* screen1 */
+
+#arrow {
+	width:90vw;
+	margin-left:30vw;
+	margin-top:-20vh;
+}
+
+#z {
+	width:50vw;
+	margin-top:-15vh;
+	margin-left:-10vw;
+}
+
+#a {
+	width:20vw;
+	margin-top:5vh;
+	margin-left:35vw;
+}
+
+#c {
+	width:30vw;
+	margin-top:25vh;
+	margin-left:45vw;
+}
+
+#h {
+	width:20vw;
+	margin-top:37vh;
+	margin-left:70vw;
+}
+
+#grid {
+	width:90vw;
+	margin-top:10vh;
+}
+
+#description {
+	width:80vw;
+	margin-top:-5vh;
+	margin-left:10vw;
+	text-align: right;
+}
+
+	#description h1 {
+		font-size: 5em;
+		line-height: 1.2em;
+	}
+
+	#description h2 {
+		width:65%;
+		margin-left: 35%;
+	}
+
+
+
+

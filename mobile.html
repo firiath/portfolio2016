@@ -1,0 +1,46 @@
+
+
+<html>
+	
+	<head>
+		<title>Zachary Deocadiz—Designer</title>
+
+		<meta charset="utf-8" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta name="description" content="Zach Deocadiz. Designer." />
+
+		<!-- Grab Google CDN's jQuery. fall back to local if necessary --> 
+
+		<script src="https://use.typekit.net/wtw1jlr.js"></script>
+		<script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+		<link rel="stylesheet" type="text/css" href="assets/scripts/stylemobile.css">
+	</head>
+
+	<body>
+		<div id="container" class="container">
+			<ul id="scene" class="scene">
+				<li id="grid" class="layer" data-depth="0.01"><img src="assets/layoutimages/grid2.svg"></li>
+				<li id="arrow" class="layer" data-depth="-0.5"><img src="assets/layoutimages/arrowmobile.svg"></li>
+				<li id="z" class="layer" data-depth="0.35"><img src="assets/layoutimages/z2.svg"></li>
+				<li id="a" class="layer" data-depth="-0.10"><img src="assets/layoutimages/a3.svg"></li>
+				<li id="c" class="layer" data-depth="0.20"><img src="assets/layoutimages/c2.svg"></li>
+				<li id="h" class="layer" data-depth="-0.3"><img src="assets/layoutimages/h2.svg"></li>
+			</ul>
+		</div>
+		<div id="description">
+			<h1>Zach Deocadiz</h1>
+			<h2>Using interaction design to create future possibilities</h2>
+		</div>
+
+	<script src="assets/scripts/parallax2.js"></script> 
+
+	<script>
+		var scene = document.getElementById('scene');
+		var parallax = new Parallax(scene);
+	</script>
+
+	</body>
+  
+</html>

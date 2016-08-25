@@ -8,70 +8,92 @@
 		<meta charset="utf-8" />
 		<meta name="description" content="Zach Deocadiz. Designer." />
 
-		<script src="js/modernizr.custom.37797.js"></script> 
-		<!-- Grab Google CDN's jQuery. fall back to local if necessary --> 
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script> 
-		<script>!window.jQuery && document.write('<script src="/js/jquery-1.6.1.min.js"><\/script>')</script>
-		<script src="assets/scripts/parallax.js"></script>
-
 		<script src="https://use.typekit.net/wtw1jlr.js"></script>
 		<script>try{Typekit.load({ async: true });}catch(e){}</script>
 
-		<link rel="stylesheet" type="text/css" href="../../assets/scripts/style.css">
+		<link rel="stylesheet" type="text/css" href="../../assets/scripts/styleindividual.css">
 	</head>
 
 	<body>
 
+		<div id="topnav">
+			<a href="http://deocadiz.com">Home</a>
+			<a class="current" href="http://deocadiz.com/stacks">Stacks</a>
+			<a href="http://deocadiz.com/fuckvr">FuckVR</a>
+			<a href="http://deocadiz.com/hab">Hack@Brown</a>
+			<a href="http://deocadiz.com/mbta">MBTA</a>
+			<a href="http://deocadiz.com/concepts">Concepts</a>
+			<a href="http://deocadiz.com/death">Death of the News</a>
+		</div>
+
+		<div id="pagenav">
+			<a href="#questions">Questions</a><br>
+			<a href="#ideation">Ideation</a><br>
+			<a href="#system">System</a><br>
+			<a href="#visual">Visual</a><br>
+		</div>
+
 		<div id="projectdescription">
-			<b>Ideation, UI/UX</b><br>
+			<h1 id="title">Stacks</h1>
+			<h2>Ideation, UI/UX</h2>
 			An iPhone app that helps people create their own social networks.<br><br>
 			<a href="http://zachazach.com/stacks">Website</a><br>
 			<a href="https://appsto.re/us/PiHKbb.i">Apple Store download</a><br>
 			Made in partnership with <a href="http://nateparrott.com">Nate Parrott</a><br><br>
 
-			<a href="#questions">Questions</a><br>
-			<a href="#ideation">Ideation</a><br>
-			<a href="#system">System</a><br>
+			
+
+			<div class="project1">
+				<h1 id="questions">Questions</h1>
+				What would it look like if anyone could make their own social network? What if people could easily solicit the type of data they want?
+			</div>
+
+			<div class="project2">
+				<h1 id="ideation">Ideation</h1>
+				<a href="http://www.gsmamobileeconomy.com/GSMA_Global_Mobile_Economy_Report_2015.pdf">With 50% of the world’s population with a mobile subscription</a>, mobile is the most pervasive computer platform. However, development for these platforms is still a long process, taking days, months, or even years to create a product. How can we leverage the mobile computing phenomenon to encourage creation and ideation on a much wider scale, allowing people to create their own social networks? We already see this happening in various Facebook groups, where users enact their own rules surrounding what content is and is not appropriate to post. What if they had the option to further customize the way they collected this information?
+			</div>
+
+			<div class="project1">
+				<h1 id="system">System</h1>
+				Inspired by hypercard, as well as drag-and-drop website builders like Weebly, we decided to create a tool that would allow anyone to create or customize their own app through dragging and dropping behaviors into a card. Behaviors are anything that a user can interact with to feed the app data, while cards are simply a defined area on which the behaviors are placed. Cards with similar layouts of behaviors are in the same stack.<br><br>
+
+				<img src="images/001.gif" class="smallimg">
+				<div class="text">
+					We allow users to directly manipulate the behaviors and place them anywhere they want on the screen. They can use gestures that are natural to them, coming from existing UI behaviors in common apps. There are very little restrictions—behaviors can be placed anywhere on a card, they can overlap other behaviors, and some behaviors can even trail off the card itself.
+				</div>
+				<div class="clearing"></div>
+
+				[workflow + wireframes
+				Create hashtag
+				Create first card
+				All following cards follow template]<br>
+				This workflow allows the user to define the template at the same time as creating the first post in the stack. There’s no unnecessary checklists or forms to fill out before getting directly to the content.<br><br>
+
+				[previous iterations using checklists, clipping onto messenger apps, etc.]
+			</div>
+
+			<div class="project2">
+				<h1 id="visual">Visual</h1>
+				<img src="images/LogoConcepts.png" class="mediumimg">
+				<div class="text">
+					The first passes for logos were an attempt
+				</div>
+				<div class="clearing"></div>
+
+				<img src="images/StacksLogo.png" class="mediumimg">
+				<div class="text">
+					Visual
+				</div>
+				<div class="clearing"></div>
+
+				<img src="images/stackscolors.jpg" class="mediumimg">
+				<div class="text">
+					Gradient
+				</div>
+				<div class="clearing"></div>
+			</div>
 		</div>
 
-		<div id="projecttitle">
-			<h1>Stacks</h1>
-		</div>
-
-		<div class="projectdescription">
-			<h1 id="questions">Questions</h1>
-			What would it look like if anyone could make their own social network? What if people could easily solicit the type of data they want?
-		</div>
-
-		<div class="projectdescription">
-			<h1 id="ideation">Ideation</h1>
-			<a href="http://www.gsmamobileeconomy.com/GSMA_Global_Mobile_Economy_Report_2015.pdf">With 50% of the world’s population with a mobile subscription</a>, mobile is the most pervasive computer platform. However, development for these platforms is still a long process, taking days, months, or even years to create a product. How can we leverage the mobile computing phenomenon to encourage creation and ideation on a much wider scale, allowing people to create their own social networks? We already see this happening in various Facebook groups, where users enact their own rules surrounding what content is and is not appropriate to post. What if they had the option to further customize the way they collected this information?
-		</div>
-
-		<div class="projectdescription">
-			<h1 id="system">System</h1>
-			Inspired by hypercard, as well as drag-and-drop website builders like Weebly, we decided to create a tool that would allow anyone to create or customize their own app through dragging and dropping behaviors into a card. Behaviors are anything that a user can interact with to feed the app data, while cards are simply a defined area on which the behaviors are placed. Cards with similar layouts of behaviors are in the same stack.<br><br>
-
-			[animation of drag and drop]<br>
-			We allow users to directly manipulate the behaviors and place them anywhere they want on the screen. They can use gestures that are natural to them, coming from existing UI behaviors in common apps. There are very little restrictions—behaviors can be placed anywhere on a card, they can overlap other behaviors, and some behaviors can even trail off the card itself.<br><br>
-
-			[workflow + wireframes
-			Create hashtag
-			Create first card
-			All following cards follow template]<br>
-			This workflow allows the user to define the template at the same time as creating the first post in the stack. There’s no unnecessary checklists or forms to fill out before getting directly to the content.<br><br>
-
-			[previous iterations using checklists, clipping onto messenger apps, etc.]
-		</div>
-
-		<div class="projectdescription">
-			<h1 id="visual">Visual</h1>
-			dfafda
-		</div>
-
-		<div id="footer">
-			<h3><a href="http://www.goodreads.com/quotes/567856-elen-sila-lumenn-omentielvo-a-star-shines-on-the-hour">ELEN SILA LUMENN' OMENTIELVO</a></h3>
-		</div>
 
 	</body>
   
