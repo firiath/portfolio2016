@@ -88,17 +88,17 @@
 	<script src="assets/scripts/dragend.min.js"></script> 
 
 	<script>
-		var scene = document.getElementById('scene');
-		var parallax = new Parallax(scene);
+		// document.addEventListener("DOMContentLoaded", function() {
+	 //      var container = document.getElementById("screens");
+	 //      dragend = new Dragend(container, {
+	 //        afterInitialize: function() {
+	 //          container.style.visibility = "visible";
+	 //        }
+	 //      });
+	 //    }, false)
 
-		document.addEventListener("DOMContentLoaded", function() {
-	      var container = document.getElementById("screens");
-	      dragend = new Dragend(container, {
-	        afterInitialize: function() {
-	          container.style.visibility = "visible";
-	        }
-	      });
-	    }, false)
+	    var scene = document.getElementById('scene');
+		var parallax = new Parallax(scene);
 	</script>
 
 	</body>
