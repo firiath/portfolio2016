@@ -19,6 +19,11 @@
 	</head>
 
 	<body>
+		<div id="pagination">
+			<div class="icon"></div>
+			<div class="icon"></div>
+			<div class="icon"></div>
+		</div>
 		<div id="screens">
 			<div class="dragend-page">
 				<div id="container" class="container">
@@ -88,17 +93,27 @@
 	<script src="assets/scripts/dragend.min.js"></script> 
 
 	<script>
-	    var container = document.getElementById("screens");
-	    dragend = new Dragend(container, {
-	    	afterInitialize: function() {
-	        container.style.visibility = "visible";
-	    }
-	    });
+		var updatePageIcon = function(pageNumber) {
+			var icons = document.getElementsByClassName('icon');
+			Array.prototype.forEach.call(icons, function(icon, index) {
+				icon.className = index === pageNumber ? 'icon active' : 'icon';
+			});
+		}
+		var container = document.getElementById("screens");
+		dragend = new Dragend(container, {
+			afterInitialize: function() {
+				container.style.visibility = "visible";
+				updatePageIcon(this.page)
+			},
+			onSwipeEnd: function() {
+				updatePageIcon(this.page);
+			}
+		});
 
-	    var scene = document.getElementById('scene');
+		var scene = document.getElementById('scene');
 		var parallax = new Parallax(scene);
 	</script>
 
 	</body>
-  
+
 </html>

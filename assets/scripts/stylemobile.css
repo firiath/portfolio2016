@@ -861,3 +861,24 @@ p {
 
 }
 
+/* me
+*****************************************************************/
+
+#pagination {
+	position: absolute;
+	bottom: 5px;
+}
+
+#pagination .icon{
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	background: white;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+#pagination .icon.active {
+	background: red;
+}
