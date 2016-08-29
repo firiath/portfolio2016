@@ -88,14 +88,12 @@
 	<script src="assets/scripts/dragend.min.js"></script> 
 
 	<script>
-		// document.addEventListener("DOMContentLoaded", function() {
-	 //      var container = document.getElementById("screens");
-	 //      dragend = new Dragend(container, {
-	 //        afterInitialize: function() {
-	 //          container.style.visibility = "visible";
-	 //        }
-	 //      });
-	 //    }, false)
+	    var container = document.getElementById("screens");
+	    dragend = new Dragend(container, {
+	    	afterInitialize: function() {
+	        container.style.visibility = "visible";
+	    }
+	    });
 
 	    var scene = document.getElementById('scene');
 		var parallax = new Parallax(scene);
