@@ -6,30 +6,59 @@ $(document).ready(function() {
     });    
 });
 
-/* Scroll the background layers */
-function parallaxScroll(){
-	var scrolled = $(window).scrollTop();
-	$('#parallax-bg1').css('top',(350-(scrolled*.4))+'px');
-	$('#parallax-bg2').css('top',(40-(scrolled*.5))+'px');
-	$('#parallax-bg3').css('top',(-750-(scrolled*.75))+'px');
-	$('#parallax-bg4').css('top',(-300-(scrolled*.2))+'px');
-	$('#parallax-bg5').css('top',(-290-(scrolled*.3))+'px');
-	$('#parallax-bg6').css('top',(700-(scrolled*.2))+'px');
-	$('#parallax-bg7').css('top',(800-(scrolled*.25))+'px');
-	$('#parallax-bg8').css('top',(1000-(scrolled*.2))+'px');
-	$('#parallax-bg9').css('top',(2500-(scrolled*.3))+'px');
 
-	$('#parallax-bg10').css('top',(3700-(scrolled*.5))+'px');
-	$('#parallax-bg11').css('top',(4100-(scrolled*.55))+'px');
-	$('#parallax-bg12').css('top',(3500-(scrolled*.45))+'px');
-	$('#parallax-bg13').css('top',(5100-(scrolled*.65))+'px');
-	$('#parallax-bg14').css('top',(4800-(scrolled*.6))+'px');
+var query = Modernizr.mq('(min-width: 950px)');
+ if (query) {
+   function parallaxScroll(){
+		var scrolled = $(window).scrollTop();
+		$('#parallax-bg1').css('top',(350-(scrolled*.4))+'px');
+		$('#parallax-bg2').css('top',(40-(scrolled*.5))+'px');
+		$('#parallax-bg3').css('top',(-550-(scrolled*.75))+'px');
+		$('#parallax-bg4').css('top',(-300-(scrolled*.2))+'px');
+		$('#parallax-bg5').css('top',(-290-(scrolled*.3))+'px');
+		$('#parallax-bg6').css('top',(700-(scrolled*.3))+'px');
+		$('#parallax-bg7').css('top',(900-(scrolled*.45))+'px');
+		$('#parallax-bg8').css('top',(1500-(scrolled*.5))+'px');
+		$('#parallax-bg9').css('top',(3600-(scrolled*.5))+'px');
 
-	$('#description').css('top',(0-(scrolled*.8))+'px');
-	$('#currentwork').css('top',(1290-(scrolled*.4))+'px');
-	$('#prevwork').css('top',(2000-(scrolled*.4))+'px');
-	$('#about').css('top',(3350-(scrolled*.4))+'px');
-	$('#friends').css('top',(4700-(scrolled*.5))+'px');
+		$('#parallax-bg10').css('top',(3300-(scrolled*.5))+'px');
+		$('#parallax-bg11').css('top',(3800-(scrolled*.55))+'px');
+		$('#parallax-bg12').css('top',(3100-(scrolled*.45))+'px');
+		$('#parallax-bg13').css('top',(3600-(scrolled*.5))+'px');
+		$('#parallax-bg14').css('top',(4100-(scrolled*.6))+'px');
+
+		$('#description').css('top',(0-(scrolled*.8))+'px');
+		$('#currentwork').css('top',(800-(scrolled*.4))+'px');
+		$('#prevwork').css('top',(1300-(scrolled*.4))+'px');
+		$('#about').css('top',(2950-(scrolled*.4))+'px');
+		$('#friends').css('top',(4700-(scrolled*.5))+'px');
+	}
+ }
+else {
+	function parallaxScroll(){
+		var scrolled = $(window).scrollTop();
+		$('#parallax-bg1').css('top',(200-(scrolled*.4))+'px');
+		$('#parallax-bg2').css('top',(40-(scrolled*.5))+'px');
+		$('#parallax-bg3').css('top',(-150-(scrolled*.75))+'px');
+		$('#parallax-bg4').css('top',(-100-(scrolled*.2))+'px');
+		$('#parallax-bg5').css('top',(-100-(scrolled*.3))+'px');
+		$('#parallax-bg6').css('top',(400-(scrolled*.5))+'px');
+		$('#parallax-bg7').css('top',(400-(scrolled*.25))+'px');
+		$('#parallax-bg8').css('top',(1000-(scrolled*.5))+'px');
+		$('#parallax-bg9').css('top',(2700-(scrolled*.5))+'px');
+
+		$('#parallax-bg10').css('top',(2500-(scrolled*.5))+'px');
+		$('#parallax-bg11').css('top',(2800-(scrolled*.55))+'px');
+		$('#parallax-bg12').css('top',(2300-(scrolled*.45))+'px');
+		$('#parallax-bg13').css('top',(2600-(scrolled*.5))+'px');
+		$('#parallax-bg14').css('top',(3050-(scrolled*.6))+'px');
+
+		$('#description').css('top',(0-(scrolled*.8))+'px');
+		$('#currentwork').css('top',(440-(scrolled*.4))+'px');
+		$('#prevwork').css('top',(800-(scrolled*.4))+'px');
+		$('#about').css('top',(2200-(scrolled*.4))+'px');
+		$('#friends').css('top',(3400-(scrolled*.5))+'px');
+	}
 }
 
 

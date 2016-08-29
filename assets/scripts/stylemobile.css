@@ -46,6 +46,10 @@ table {
 	border-spacing: 0;
 }
 
+
+/* MOBILE STYLES
+*****************************************************************/
+
 /* Extended base styles (site specific)
 *****************************************************************/
 
@@ -56,7 +60,7 @@ html {
 body {
 	background: #181819;
 	line-height: 1.5;
-	color: #F5F5F5 !important;
+	color: #F5F5F5;
 	font-size: 14px;
 	font-family: "matrix-ii", helvetica, arial ,sans-serif;
 }
@@ -103,80 +107,757 @@ a:visited {
 
 #screens {
 	width:100vw;
+	display:block;
+}
+
+#desktop {
+	display:none;
 }
 
 .dragend-page {
 	width:100vw;
+	height:100vh;
+	overflow-y:scroll;
 	overflow-x:none;
 }
 
 .paddingaround {
 	width:80vw;
 	margin-left:10vw;
+	font-size: 0.8em;
 }
 
 /* splash 
 *****************************************************************/
 
-#arrow {
+#arrowmobile {
 	width:90vw;
 	margin-left:30vw;
 	margin-top:-20vh;
 }
 
-#z {
+#z2 {
 	width:50vw;
 	margin-top:-15vh;
 	margin-left:-10vw;
 }
 
-#a {
+#a3 {
 	width:20vw;
 	margin-top:5vh;
 	margin-left:35vw;
 }
 
-#c {
+#c2 {
 	width:30vw;
 	margin-top:25vh;
 	margin-left:45vw;
 }
 
-#h {
+#h2 {
 	width:20vw;
 	margin-top:37vh;
 	margin-left:70vw;
 }
 
-#grid {
+#grid4 {
 	width:90vw;
 	margin-top:10vh;
 }
 
-#description {
+#description2 {
 	width:80vw;
-	margin-top:0vh;
+	margin-top:-5vh;
 	margin-left:10vw;
 	text-align: right;
 }
 
-	#description h1 {
+	#description2 h1 {
 		font-size: 3.5em;
 		line-height: 1.2em;
 	}
 
-	#description h2 {
+	#description2 h2 {
 		font-size: 1.25em;
 		width:75%;
 		margin-left: 25%;
 	}
 
 
-/* work
+/* MOBILE FIXES
+*****************************************************************/
+@media (min-width:350px) { 
+	#description2 {
+		margin-top: -20vh;
+		width:85vw;
+	}
+}
+
+@media (min-width:500px) { 
+	#description2 {
+		margin-top: -35vh;
+	}
+}
+
+@media (min-width:580px) { 
+	#description2 {
+		margin-top: -40vh;
+	}
+}
+
+@media (min-width:610px) { 
+	#description2 {
+		margin-top: -50vh;
+	}
+}
+
+@media (min-width:660px) { 
+	#description2 {
+		margin-top: -55vh;
+	}
+}
+
+@media (min-width:700px) { 
+	#description2 {
+		margin-top: -60vh;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* DESKTOP STYLES
 *****************************************************************/
 
+@media (min-width:768px) { 
+
+#screens {
+	display:none;
+}
+
+#desktop {
+	display:block;
+}
+
+body {
+	background: #f5f5f5;
+	line-height: 1.5;
+	color: #181819;
+	font-size: 14px;
+}
+h1 {
+	color: #181819;
+	font-size: 5em;
+	line-height: 1.2em;
+}
+
+h2 {
+	color: #181819;
+	text-transform: lowercase;
+	letter-spacing: 1px;
+	font-size: 1.2em;
+}
+
+h3 {
+	color: #181819;
+	font-size: 1em;
+	line-height: 0.8em;
+	text-transform: uppercase;
+}
+
+a, a:link,
+a:active,
+a:visited {
+	-webkit-transition: text-shadow 0.25s ease-out;
+	-moz-transition: text-shadow 0.25s ease-out;
+	-o-transition: text-shadow 0.25s ease-out;
+	transition: text-shadow 0.25s ease-out;
+	color:#181819;
+	outline: none;
+	text-decoration:none;
+	}
+	a:hover { 
+		text-shadow: 1px 1px 1px #fff800;
+		}
 
 
+#about a, #about a:link,
+#about a:active,
+#about a:visited {
+	text-transform: lowercase;
+	font-variant: small-caps;
+	font-size: 1.15em;
+	letter-spacing: 1px;
+}
+img { 
+	display:block;
+	}
+p {
+	margin:1em 0;
+	}
 
-/* me
+/* Parallax
 *****************************************************************/
+
+/* content */
+#description {
+	line-height: 1.7;
+	z-index: 4;
+	position: fixed;
+	padding-top: 00px;
+	left:60vw;
+	width:30vw;
+}
+#currentwork {
+	z-index: 4;
+	position: fixed;
+	top: 440px;
+	width:40vw;
+	left:10vw;
+	line-height: 1.7;
+}
+#prevwork {
+	z-index: 4;
+	position: fixed;
+	top: 800px;
+	width: 30vw;
+	left:60vw;
+	line-height: 1.7;
+}
+
+#about {
+	z-index: 4;
+	position: fixed;
+	top: 2200;
+	width: 50vw;
+	left:10vw;
+	line-height: 1.7;
+}
+
+#friends {
+	display:none;
+}
+
+#footer {
+	z-index: 4;
+	position: absolute;
+	top: 6000px;
+	width: 50vw;
+	text-align: center;
+	left:25vw;
+	line-height: 1.7;
+	padding-bottom: 10vh;
+}
+
+/*z*/
+#parallax-bg3 {
+	z-index: 3;
+	position: fixed;
+	top: -150px;
+	width: 70vw;
+	left: -20vw;
+	}
+	/* balloon */
+	#bg3-1 {
+		width: 100%;
+		}
+
+/*a*/
+#parallax-bg2 {
+	z-index: 0;
+	position: fixed;
+	width: 15vw;
+	top:40px;
+	left: 30vw;
+	}
+	#bg2-1 {
+		width:100%;
+		}
+
+/*c*/
+#parallax-bg1 {
+	z-index: 1;
+	position: fixed;
+	left: 35vw;
+	top: 200px;
+	width: 20vw;
+	}
+	#bg1-1 {
+		width:100%;
+		}
+
+/*arrow2*/
+#parallax-bg4 {
+	z-index: 3;
+	position: fixed;
+	top: -100px;
+	left: 0px;
+	width:50vw;
+}
+
+/*arrow1*/
+#parallax-bg5 {
+	z-index: 1;
+	position: fixed;
+	top: -100px;
+	left: -0vw;
+	width:50vw;
+}
+
+/*h*/
+#parallax-bg6 {
+	z-index: 1;
+	position: fixed;
+	top: 400px;
+	left: 50vw;
+	width:10vw;
+}
+
+/*arrow3*/
+#parallax-bg7 {
+	z-index: 0;
+	position: fixed;
+	top: 400px;
+	left: 40vw;
+	width:20vw;
+}
+
+/*arrow4*/
+#parallax-bg8 {
+	z-index: 0;
+	position: fixed;
+	top: 1000px;
+	left: 35vw;
+	width:30vw;
+}
+
+/*arrow5*/
+#parallax-bg9 {
+	z-index: 0;
+	position: fixed;
+	top: 2700px;
+	left: 45vw;
+	width:30vw;
+}
+
+/*a2*/
+#parallax-bg10 {
+	z-index: 0;
+	position: fixed;
+	top: 2500px;
+	left: 5vw;
+	width:20vw;
+}
+
+/*b*/
+#parallax-bg11 {
+	z-index: 0;
+	position: fixed;
+	top: 2800px;
+	left: 27vw;
+	width:10vw;
+}
+
+/*o*/
+#parallax-bg12 {
+	z-index: 0;
+	position: fixed;
+	top: 2300px;
+	left: 40vw;
+	width:20vw;
+}
+
+/*u*/
+#parallax-bg13 {
+	z-index: 0;
+	position: fixed;
+	top: 2600px;
+	left: 62vw;
+	width:10vw;
+}
+
+/*t*/
+#parallax-bg14 {
+	z-index: 0;
+	position: fixed;
+	top: 3050px;
+	left: 75vw;
+	width:15vw;
+}
+
+
+/* gallery */
+
+.portfoliopieces {
+	margin-top:3vh;
+}
+
+#stacks:before, #superimpose:before, #hab:before, #mbta:before, #fuckvr:before, #death:before {
+	content: '';
+	background-size: contain;
+	background-repeat: no-repeat;
+	display: block !important;
+	position: absolute;
+	filter: blur(15px);
+    -webkit-filter: blur(15px);
+    transition: .7s;
+    -webkit-transition: filter .7s, box-shadow. 7s;
+    -moz-transition: filter .7s, box-shadow. 7s;
+}
+
+#stacks:before {
+	background-image: url('../../projects/stacks/images/cover.jpg');
+	width:30vw;
+	height:30vh;
+	left:-50vw;
+}
+
+#superimpose:before {
+	background-image: url('../../projects/superimpose/images/cover.jpg');
+	width:50vw;
+	height:40vh;
+	left:-70vw;
+}
+
+#hab:before {
+	background-image: url('../../projects/hab/images/cover.jpg');
+	width:25vw;
+	height:90vh;
+	left:-30vw;
+}
+
+#mbta:before {
+	background-image: url('../../projects/mbta/images/cover.jpg');
+	width:70vw;
+	height:50vh;
+	left:-70vw;
+}
+
+#fuckvr:before {
+	background-image: url('../../projects/fuckvr/images/cover.jpg');
+	width:50vw;
+	height:40vh;
+	left:-60vw;
+	margin-top:10vh;
+}
+
+#death:before {
+	background-image: url('../../projects/death/images/cover.jpg');
+	width:40vw;
+	height:60vh;
+	left:-30vw;
+	margin-top: 10vh;
+}
+
+#stacks:hover:before, #superimpose:hover:before, #hab:hover:before, #mbta:hover:before, #fuckvr:hover:before, #death:hover:before {
+	filter: blur(0px);
+    -webkit-filter: blur(0px);
+}
+
+#grid1 {
+	width:30vw;
+	position: absolute;
+	left:60vw;
+	top:10vh;
+	z-index: 0;
+}
+
+#grid2 {
+	width:50vw;
+	position: absolute;
+	left:40vw;
+	top:200vh;
+	z-index: 0;
+}
+
+#grid3 {
+	width:40vw;
+	position: absolute;
+	left:5vw;
+	top:500vh;
+	z-index: 0;
+}
+
+}
+
+
+
+
+
+/* WIDER SCREENS
+*****************************************************************/
+
+@media (min-width:950px) { 
+
+body {
+	background: #f5f5f5;
+	line-height: 1.5;
+	color: #181819;
+	font-size: 18px;
+}
+h1 {
+	color: #181819;
+	font-size: 6em;
+	line-height: 1.2em;
+}
+
+h2 {
+	color: #181819;
+	text-transform: lowercase;
+	letter-spacing: 1px;
+	font-size: 2em;
+}
+
+h3 {
+	color: #181819;
+	font-size: 1.5em;
+	line-height: 0.8em;
+	text-transform: uppercase;
+}
+
+a, a:link,
+a:active,
+a:visited {
+	-webkit-transition: text-shadow 0.25s ease-out;
+	-moz-transition: text-shadow 0.25s ease-out;
+	-o-transition: text-shadow 0.25s ease-out;
+	transition: text-shadow 0.25s ease-out;
+	color:#181819;
+	outline: none;
+	text-decoration:none;
+	}
+	a:hover { 
+		text-shadow: 1px 1px 1px #fff800;
+		}
+
+
+#about a, #about a:link,
+#about a:active,
+#about a:visited {
+	text-transform: lowercase;
+	font-variant: small-caps;
+	font-size: 1.15em;
+	letter-spacing: 1px;
+}
+img { 
+	display:block;
+	}
+p {
+	margin:1em 0;
+	}
+
+/* Parallax
+*****************************************************************/
+
+/* content */
+#description {
+	line-height: 1.7;
+	z-index: 4;
+	position: fixed;
+	padding-top: 00px;
+	left:60vw;
+	width:30vw;
+}
+#currentwork {
+	z-index: 4;
+	position: fixed;
+	top: 800px;
+	width:25vw;
+	left:10vw;
+	line-height: 1.7;
+}
+#prevwork {
+	z-index: 4;
+	position: fixed;
+	top: 1300px;
+	width: 30vw;
+	left:60vw;
+	line-height: 1.7;
+}
+
+#about {
+	z-index: 4;
+	position: fixed;
+	top: 2950px;
+	width: 35vw;
+	left:10vw;
+	line-height: 1.7;
+}
+
+#friends {
+	z-index: 4;
+	position: fixed;
+	top: 4700px;
+	width: 25vw;
+	left:50vw;
+	line-height: 1.7;
+}
+
+#footer {
+	z-index: 4;
+	position: absolute;
+	top: 9500px;
+	width: 50vw;
+	text-align: center;
+	left:25vw;
+	line-height: 1.7;
+	padding-bottom: 10vh;
+}
+
+/*z*/
+#parallax-bg3 {
+	z-index: 3;
+	position: fixed;
+	top: -550px;
+	width: 100vw;
+	left: -40vw;
+	}
+	/* balloon */
+	#bg3-1 {
+		width: 100%;
+		}
+
+/*a*/
+#parallax-bg2 {
+	z-index: 0;
+	position: fixed;
+	width: 15vw;
+	top:40px;
+	left: 30vw;
+	}
+	#bg2-1 {
+		width:100%;
+		}
+
+/*c*/
+#parallax-bg1 {
+	z-index: 1;
+	position: fixed;
+	left: 30vw;
+	top: 350px;
+	width: 25vw;
+	}
+	#bg1-1 {
+		width:100%;
+		}
+
+/*arrow*/
+#parallax-bg4 {
+	z-index: 3;
+	position: fixed;
+	top: -300px;
+	left: -10vw;
+	width:70vw;
+}
+
+/*arrow*/
+#parallax-bg5 {
+	z-index: 1;
+	position: fixed;
+	top: -290px;
+	left: -10vw;
+	width:70vw;
+}
+
+/*h*/
+#parallax-bg6 {
+	z-index: 1;
+	position: fixed;
+	top: 700px;
+	left: 50vw;
+	width:15vw;
+}
+
+/*arrow*/
+#parallax-bg7 {
+	z-index: 0;
+	position: fixed;
+	top: 900px;
+	left: 40vw;
+	width:20vw;
+}
+
+/*arrow*/
+#parallax-bg8 {
+	z-index: 0;
+	position: fixed;
+	top: 1500px;
+	left: 45vw;
+	width:30vw;
+}
+
+/*arrow*/
+#parallax-bg9 {
+	z-index: 0;
+	position: fixed;
+	top: 3600px;
+	left: 45vw;
+	width:30vw;
+}
+
+/*a2*/
+#parallax-bg10 {
+	z-index: 0;
+	position: fixed;
+	top: 3300px;
+	left: 5vw;
+	width:20vw;
+}
+
+/*b*/
+#parallax-bg11 {
+	z-index: 0;
+	position: fixed;
+	top: 3800px;
+	left: 30vw;
+	width:10vw;
+}
+
+/*o*/
+#parallax-bg12 {
+	z-index: 0;
+	position: fixed;
+	top: 3100px;
+	left: 44vw;
+	width:20vw;
+}
+
+/*u*/
+#parallax-bg13 {
+	z-index: 0;
+	position: fixed;
+	top: 3600px;
+	left: 65vw;
+	width:10vw;
+}
+
+/*t*/
+#parallax-bg14 {
+	z-index: 0;
+	position: fixed;
+	top: 4100px;
+	left: 80vw;
+	width:15vw;
+}
+
+}
+
